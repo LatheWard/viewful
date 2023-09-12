@@ -2,7 +2,7 @@ import {useEffect} from 'react'
 
 //529a4538
 
-const API_URL = 'http://omdbapi.com/apikey=529a4538'
+const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=529a4538'
 
 const App = () => {
     
