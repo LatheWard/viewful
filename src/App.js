@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import MovieCard from './MovieCard';
+import movieCard from "./movieCard";
 import './App.css';
 import SearchIcon from './search.svg';
 
@@ -45,16 +45,13 @@ const App = () => {
                     src={SearchIcon}
                     alt="search"
                     onClick={() => searchMovies(searchTerm)}/>
-                
             </div>
 
-            
-                {movies?.length > 0
-                    ? (
-                        <div className="container">
-                            {movies.map((movie) => (
-                                <MovieCard movie={movie} />
-                            ))}   
+                {movies?.length > 0 ? (
+                    <div className="container">
+                        {movies.map((movie) => (
+                            <movieCard movie={movie} />
+                        ))}   
                         </div>
                     ) :
                     (
