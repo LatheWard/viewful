@@ -1,23 +1,15 @@
 import logo from './logo.svg';
+import { useState } from 'react'
 import './App.css';
 
-const Person = (props) => {
-  return (
-    <>
-      <h1>Name: {props.fname}</h1>
-      <h2>Last name: {props.lname}</h2>
-      <h3>Age: {props.age}</h3>
-    </>
-    
-  )
-}
-
 const App = () => {
+const [counter, setCounter] = useState(0);
+
   return (
     <div className="App">
-      <Person fname={'John'} lname={'Appleseed'} age={30} />
-      <Person fname={'Mike'} lname={'Mentzer'} age={25} />
-      <Person fname={'Tom'} lname={'Platz'} age={33} />
+      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>-</button>
+      <h1>{counter}</h1>
+      <button onClick={() => setCounter((prevCount) => prevCount + 1)}>+</button>
     </div>
   );
 }
