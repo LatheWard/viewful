@@ -7,6 +7,7 @@ import SearchIcon from './search.svg';
 //529a4538
 
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=529a4538'
+// Example of movie object
 const  movie1 = {
         "Title": "Pulp Fiction",
         "Year": "1994",
@@ -43,8 +44,8 @@ const App = () => {
                 <img
                     src={SearchIcon}
                     alt="search"
-                    onClick={() => searchMovies(searchTerm)}>
-                </img>
+                    onClick={() => searchMovies(searchTerm)}/>
+                
             </div>
 
             
