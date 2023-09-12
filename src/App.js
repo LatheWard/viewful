@@ -1,13 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-const name = 'the thing, yes!';
-const isTheThing = false;
+const Person = (props) => {
+  return (
+    <>
+      <h1>Name: {props.fname}</h1>
+      <h2>Last name: {props.lname}</h2>
+      <h3>Age: {props.age}</h3>
+    </>
+    
+  )
+}
 
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello, {isTheThing ? name : 'The thing, no!'} </h1>
+      <Person fname={'John'} lname={'Appleseed'} age={30} />
+      <Person fname={'Mike'} lname={'Mentzer'} age={25} />
+      <Person fname={'Tom'} lname={'Platz'} age={33} />
     </div>
   );
 }
