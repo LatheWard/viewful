@@ -5,6 +5,13 @@ import SearchIcon from './search.svg'
 //529a4538
 
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=529a4538'
+const  movie1 = {
+        "Title": "Pulp Fiction",
+        "Year": "1994",
+        "imdbID": "tt0110912",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+}
 
 const App = () => {
     
@@ -36,7 +43,17 @@ const App = () => {
                 </img>
             </div>
 
-            <div className="container"></div>
+            <div className="container">
+                <div classname="movie">
+                    <div>
+                        <p>{movie1.Year}</p>
+                    </div>
+
+                    <div>
+                        <img src={movie1.Poster} alt={movie1.Title}/>
+                    </div>
+                </div>
+            </div>
 
         </div>
     );
