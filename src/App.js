@@ -1,4 +1,6 @@
 import {useEffect} from 'react'
+import './App.css';
+import SearchIcon from './search.svg'
 
 //529a4538
 
@@ -18,7 +20,25 @@ const App = () => {
         }, []);
 
     return (
-        <h1>App</h1>
+        <div className="app">
+            <h1>Viewful</h1>
+
+            <div className="search">
+                <input 
+                    placeholder="Search movies"
+                    values="Gone with the Wind"
+                    onChange={() => {}}
+                />
+                <img
+                    src={SearchIcon}
+                    alt="search"
+                    onClick={() => {}}>
+                </img>
+            </div>
+
+            <div className="container"></div>
+
+        </div>
     );
 }
 
