@@ -3,18 +3,17 @@ import MovieCard from "./MovieCard";
 import './App.css';
 import SearchIcon from './search.svg';
 
-
 //529a4538
 
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=529a4538'
 // Example of movie object
-const  movie1 = {
-        "Title": "Pulp Fiction",
-        "Year": "1994",
-        "imdbID": "tt0110912",
-        "Type": "movie",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
-}
+// const  movie1 = {
+//         "Title": "Pulp Fiction",
+//         "Year": "1994",
+//         "imdbID": "tt0110912",
+//         "Type": "movie",
+//         "Poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+// }
 
 const App = () => {
     const [movies, setMovies] = useState([]);
@@ -53,8 +52,7 @@ const App = () => {
                             <MovieCard movie={movie} />
                         ))}   
                         </div>
-                    ) :
-                    (
+                    ) : (
                         <div classname="empty">
                             <h2>No movies found</h2>
                         </div>
